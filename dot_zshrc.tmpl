@@ -1,14 +1,18 @@
 {{ if (eq .chezmoi.os "linux") }}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+## Windows WSL Configuration
 # Load Antigen
 source "$HOME/.antigen.zsh"
+alias clip='clip.exe'
 
 {{   end }}
 {{ end }}
 {{ if (eq .chezmoi.os "darwin") }}
+## OSX Configuration
 source /usr/local/share/antigen/antigen.zsh
 
 {{ end }}
+## Common Configuration
 # Load Antigen configurations
 antigen init ~/.antigenrc
 
@@ -28,9 +32,6 @@ fi
 eval "$(nodenv init -)"
 
 export NODENV_ROOT="$HOME/.nodenv"
-
-alias clip='clip.exe'
-
 export PATH="$NODENV_ROOT/versions/$(nodenv version-name)/bin/:/usr/local/bin/aws_completer:$PATH"
 
 autoload bashcompinit && bashcompinit
