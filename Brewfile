@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "chezmoi"
+brew "nodenv"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "starship"
