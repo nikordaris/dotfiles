@@ -39,3 +39,12 @@ autoload -Uz compinit && compinit
 compinit
 complete -C '/usr/local/bin/aws_completer' aws
 
+if [[ -a ~/.config/bw/.bwrc ]]; then
+  source ~/.config/bw/.bwrc
+fi
+
+# Alias
+alias brew-dump="mv ~/Brewfile ~/Brewfile.bk && brew bundle dump"
+alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
+function bws () { bw list items --search $1 | jq }
+
