@@ -1,0 +1,30 @@
+# Load oh-my-zsh library
+antigen use oh-my-zsh
+
+# plugins with oh-my-zsh
+antigen bundle git
+antigen bundle command-not-found
+#antigen bundle common-aliases
+# antigen bundle autojump
+# antigen bundle z
+antigen bundle fasd
+
+# external plugins
+antigen bundle unixorn/git-extra-commands
+antigen bundle psprint/zsh-navigation-tools
+antigen bundle desyncr/auto-ls
+antigen bundle MichaelAquilina/zsh-you-should-use
+antigen bundle zsh-users/zsh-syntax-highlighting # must be last plugin to get effect
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+
+# NVM bundle
+#antigen bundle lukechilds/zsh-nvm
+#antigen bundle Sparragus/zsh-auto-nvm-use
+
+# Select theme
+#antigen theme denysdovhan/spaceship-prompt
+
+# Tell Antigen that you're done
+antigen apply
+

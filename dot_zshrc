@@ -1,0 +1,35 @@
+# Load Brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Load Antigen
+source "$HOME/.antigen.zsh"
+
+# Load Antigen configurations
+antigen init ~/.antigenrc
+
+
+# Set Starship Prompt
+export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
+eval "$(starship init zsh)"
+
+# Init pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+
+# Init nodenv
+eval "$(nodenv init -)"
+
+export NODENV_ROOT="$HOME/.nodenv"
+
+alias clip='clip.exe'
+
+export PATH="$NODENV_ROOT/versions/$(nodenv version-name)/bin/:/usr/local/bin/aws_completer:$PATH"
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+compinit
+complete -C '/usr/local/bin/aws_completer' aws
+
