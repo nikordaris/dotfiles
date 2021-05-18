@@ -5,6 +5,10 @@ source "$HOME/.antigen.zsh"
 
 {{   end }}
 {{ end }}
+{{ if (eq .chezmoi.os "darwin") }}
+source /usr/local/share/antigen/antigen.zsh
+
+{{ end }}
 # Load Antigen configurations
 antigen init ~/.antigenrc
 

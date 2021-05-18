@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
+brew "antigen"
 brew "chezmoi"
 brew "nodenv"
 brew "pyenv"
