@@ -47,4 +47,7 @@ fi
 alias brew-dump="mv ~/Brewfile ~/Brewfile.bk && brew bundle dump"
 alias bw-unlock='export BW_SESSION=$(bw unlock --raw)'
 function bws () { bw list items --search $1 | jq }
+alias bw-apple-pwd="bw get password c8d76ea2-6cd8-47f1-b503-ad2b014c6281 | pbcopy"
+alias bwf-user="bw get username 313d8ecd-a2bb-4416-b13a-ad2401089f95 | pbcopy"
+alias bwf-pwd="bw get password 313d8ecd-a2bb-4416-b13a-ad2401089f95 | pbcopy"
 
