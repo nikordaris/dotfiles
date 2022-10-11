@@ -1,3 +1,11 @@
 [user]
 	name = Nick Harris
 	email = {{ .email }}
+[fetch]
+	prune = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[alias]
+	conflicts = diff --name-only --diff-filter=U
