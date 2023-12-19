@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/core"
 brew "antigen"
 brew "bitwarden-cli"
 brew "chezmoi"

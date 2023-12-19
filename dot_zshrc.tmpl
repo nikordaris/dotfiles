@@ -9,7 +9,8 @@ alias clip='clip.exe'
 {{ end }}
 {{ if (eq .chezmoi.os "darwin") }}
 ## OSX Configuration
-source /usr/local/share/antigen/antigen.zsh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+source "$(brew --prefix)/share/antigen/antigen.zsh"
 
 {{ end }}
 ## Common Configuration
