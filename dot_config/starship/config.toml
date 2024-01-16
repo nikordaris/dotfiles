@@ -22,8 +22,8 @@ disabled = true
 #threshold = 30
 #style = "bold yellow"
 
-#[directory]
-#truncation_length = 4
+[directory]
+truncation_length = 3
 
 # docker
 #[docker_context]
@@ -63,12 +63,13 @@ deleted = "🗑"
 #disabled = true
 
 # kubernetes
-#[kubernetes]
+[kubernetes]
+format = '[⛵ ($context)|($namespace)](dimmed green) in '
 #symbol = "⛵ "
 #style = "dimmed green"
-#disabled = false
-#[kubernetes.context_aliases]
-#"dev.local.cluster.k8s" = "dev"
+disabled = false
+[kubernetes.context_aliases]
+"homelab.harris.place" = "homelab"
 
 #[memory_usage]
 #disabled = false
@@ -81,4 +82,3 @@ deleted = "🗑"
 
 [python]
 pyenv_version_name = true
-
