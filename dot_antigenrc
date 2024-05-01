@@ -10,8 +10,8 @@ antigen bundle command-not-found
 antigen bundle fasd
 
 # external plugins
-antigen bundle unixorn/git-extra-commands
-antigen bundle psprint/zsh-navigation-tools
+antigen bundle unixorn/git-extra-commands@main
+antigen bundle psprint/zsh-navigation-tools@main
 antigen bundle desyncr/auto-ls
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-syntax-highlighting # must be last plugin to get effect
