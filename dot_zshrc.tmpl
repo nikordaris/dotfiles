@@ -34,7 +34,7 @@ fi
 eval "$(nodenv init -)"
 
 export NODENV_ROOT="$HOME/.nodenv"
-export PATH="$NODENV_ROOT/versions/$(nodenv version-name)/bin/:/usr/local/bin/aws_completer:$PATH"
+export PATH="/usr/local/bin/aws_completer:$PATH"
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
