@@ -1,6 +1,4 @@
-tap "homebrew/bundle"
 brew "antigen"
-brew "bitwarden-cli"
 brew "chezmoi"
 brew "jq"
 brew "nodenv"
