@@ -11,6 +11,7 @@ These dotfiles are managed with Chezmoi
    data:
      email: [YOUR_EMAIL]
      aws_sso_account_id: [YOUR_AWS_ACCOUNT_ID]
+     aws_sso_start_url: [YOUR_AWS_SSO_START_URL]
      aws_region: [YOUR_AWS_REGION]
    ```
 4. Install a [Nerd Font](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#font-installation) for Starship
