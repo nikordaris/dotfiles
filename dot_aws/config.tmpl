@@ -1,0 +1,10 @@
+[profile dev]
+sso_session = dev
+sso_account_id = {{ .aws_sso_account_id }}
+sso_role_name = PowerUserAccess
+region = {{ .aws_region | default "us-east-1" }}
+output = yaml-stream
+[sso-session dev]
+sso_start_url = {{ .aws_sso_start_url }}
+sso_region = {{ .aws_region | default "us-east-1" }}
+sso_registration_scopes = sso:account:access

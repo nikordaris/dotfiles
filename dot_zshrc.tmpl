@@ -1,5 +1,5 @@
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{ if (eq .chezmoi.os "linux") }}
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 ## Windows WSL Configuration
 # Load Antigen

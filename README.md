@@ -10,6 +10,8 @@ These dotfiles are managed with Chezmoi
    ```yaml
    data:
      email: [YOUR_EMAIL]
+     aws_sso_account_id: [YOUR_AWS_ACCOUNT_ID]
+     aws_region: [YOUR_AWS_REGION]
    ```
 4. Install a [Nerd Font](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#font-installation) for Starship
 5. `chezmoi init --apply --verbose https://github.com/[GITHUB_USERNAME]/dotfiles.git`
