@@ -31,15 +31,24 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Init nodenv
+export NODENV_ROOT="$HOME/.nodenv"
+[ -d "$NODENV_ROOT/bin" ] && export PATH="$NODENV_ROOT/bin:$PATH"
 eval "$(nodenv init -)"
 
-export NODENV_ROOT="$HOME/.nodenv"
-export PATH="/usr/local/bin/aws_completer:$PATH"
+# enable corepack
+if command -v corepack >/dev/null; then
+  corepack enable >/dev/null 2>&1
+  command -v nodenv >/dev/null && nodenv rehash >/dev/null 2>&1
+fi
 
-autoload bashcompinit && bashcompinit
+# zsh + bash completion bridge
 autoload -Uz compinit && compinit
-compinit
-complete -C '/usr/local/bin/aws_completer' aws
+autoload -U +X bashcompinit && bashcompinit
+
+# AWS CLI completion
+if [ -x /usr/local/bin/aws_completer ]; then
+  complete -C '/usr/local/bin/aws_completer' aws
+fi
 
 if [[ -a ~/.config/bw/.bwrc ]]; then
   source ~/.config/bw/.bwrc
