@@ -10,6 +10,7 @@ These dotfiles are managed with Chezmoi
    ```yaml
    data:
      email: [YOUR_EMAIL]
+     # Optional. `~/.aws/config` is only generated when aws_sso_start_url is set.
      aws_sso_account_id: [YOUR_AWS_ACCOUNT_ID]
      aws_sso_start_url: [YOUR_AWS_SSO_START_URL]
      aws_region: [YOUR_AWS_REGION]
