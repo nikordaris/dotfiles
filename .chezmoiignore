@@ -1,1 +1,4 @@
 README.md
+{{ if not (hasKey . "aws_sso_start_url") }}
+.aws/config
+{{ end }}
