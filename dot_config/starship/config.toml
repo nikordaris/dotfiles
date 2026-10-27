@@ -64,12 +64,24 @@ deleted = "🗑"
 
 # kubernetes
 [kubernetes]
-format = '[⛵ ($context)|($namespace)](dimmed green) in '
-#symbol = "⛵ "
-#style = "dimmed green"
+format = '[⛵ $context( \($namespace\))]($style) in '
+style = "dimmed green"
 disabled = false
-[kubernetes.context_aliases]
-"homelab.harris.place" = "homelab"
+
+# Patterns are anchored (^...$); first match wins.
+[[kubernetes.contexts]]
+context_pattern = 'homelab\.harris\.place'
+context_alias = "homelab"
+
+# k8s.<cluster>.<region>.<domain>-<role> -> <cluster>.<region>; production (p-*) in red
+[[kubernetes.contexts]]
+context_pattern = 'k8s\.(?P<cluster>[^.]+)\.(?P<region>p-[^.]+)\..*'
+context_alias = "$cluster.$region"
+style = "bold red"
+
+[[kubernetes.contexts]]
+context_pattern = 'k8s\.(?P<cluster>[^.]+)\.(?P<region>[^.]+)\..*'
+context_alias = "$cluster.$region"
 
 #[memory_usage]
 #disabled = false
